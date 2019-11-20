@@ -3,15 +3,16 @@ package com.exam.mutant.control;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.PostConstruct;
+
+import com.exam.mutant.impl.XmenRepo;
 import com.exam.mutant.model.Stats;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 
 
 
-@Service
+@Component
 public class StatsController {
 	
 	private XmenRepo xmenRepo;
