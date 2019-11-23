@@ -1,2 +1,0 @@
-# MutantX
-Exam gen x.
