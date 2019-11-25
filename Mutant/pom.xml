@@ -75,6 +75,7 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
+                   
                     <execution>
       <id>coverage-check</id>
       <goals>
@@ -87,6 +88,9 @@
             <excludes>
               <exclude>com.exam.mutant.exp</exclude>
             </excludes>
+            <includes>
+            	<include>com.exam.mutant.Mutant.MutantApplicationTests.java</include>
+            </includes>
             <limits>
               <limit>
                 <counter>LINE</counter>
@@ -98,13 +102,22 @@
         </rules>
       </configuration>
     </execution>
-            	</executions>
+    
+   </executions>
         	</plugin>
-        	
+        	<plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId> 
+      </plugin>
+      <plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>fabric8-maven-plugin</artifactId> 
+        <version>4.3.1</version>
+      </plugin>
         	
 		</plugins>
 	</build>
-<reporting>
+	<reporting>
 		<plugins>
         	<plugin>
                 <groupId>org.jacoco</groupId>
